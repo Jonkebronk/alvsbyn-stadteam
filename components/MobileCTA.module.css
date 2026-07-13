@@ -1,0 +1,39 @@
+.sticky {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sticky {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    background: var(--color-primary);
+    padding: 0;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem;
+    color: var(--color-white);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .link svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Add bottom padding to body so footer isn't hidden behind sticky CTA */
+  body {
+    padding-bottom: 60px;
+  }
+}
