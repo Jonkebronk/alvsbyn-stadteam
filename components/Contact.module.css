@@ -37,8 +37,8 @@
 }
 
 .itemLink {
-  color: var(--color-text);
-  font-weight: 600;
+  color: var(--color-text-light);
+  font-weight: inherit;
 }
 
 .itemLink:hover {
