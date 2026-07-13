@@ -37,12 +37,12 @@
 }
 
 .itemLink {
-  color: var(--color-primary);
+  color: var(--color-text);
   font-weight: 600;
 }
 
 .itemLink:hover {
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
 }
 
 @media (max-width: 768px) {
