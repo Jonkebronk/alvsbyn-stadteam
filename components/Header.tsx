@@ -18,6 +18,21 @@ export default function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
         <a href="#" className={styles.logo}>
+          <svg
+            className={styles.logoIcon}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M12 2l1.09 3.26L16 6l-2.18 2.18L14.36 12 12 10.09 9.64 12l.54-3.82L8 6l2.91-.74z" />
+            <path d="M5 17l1.5-1.5" />
+            <path d="M19 17l-1.5-1.5" />
+            <path d="M12 22v-3" />
+          </svg>
           Älvsbyns Städteam
         </a>
 

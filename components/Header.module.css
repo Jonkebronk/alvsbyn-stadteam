@@ -15,9 +15,18 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--color-primary);
+}
+
+.logoIcon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
 }
 
 .nav {
