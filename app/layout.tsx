@@ -1,5 +1,20 @@
 import type { Metadata } from "next";
+import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  display: "swap",
+  variable: "--font-heading",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "Älvsbyns Städteam – Hemstädning, kontorsstädning & flyttstäd i Älvsbyn",
@@ -51,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="sv">
+    <html lang="sv" className={`${poppins.variable} ${inter.variable}`}>
       <head>
         <script
           type="application/ld+json"
