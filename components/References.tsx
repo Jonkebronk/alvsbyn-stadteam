@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./References.module.css";
 
 interface GalleryImage {
@@ -6,9 +5,13 @@ interface GalleryImage {
   alt: string;
 }
 
-// Lägg till bilder här för att visa galleriet.
-// Exempel: { src: "/gallery/hemstadning-1.jpg", alt: "Hemstädning – vardagsrum" }
-const galleryImages: GalleryImage[] = [];
+const galleryImages: GalleryImage[] = [
+  { src: "/gallery/hemstadning.jpg", alt: "Hemstädning – rent och fräscht vardagsrum" },
+  { src: "/gallery/kok.jpg", alt: "Kök efter professionell städning" },
+  { src: "/gallery/kontor.jpg", alt: "Kontorsstädning – ren och inbjudande arbetsplats" },
+  { src: "/gallery/badrum.jpg", alt: "Badrum efter grundlig rengöring" },
+  { src: "/gallery/flyttstad.jpg", alt: "Flyttstädning – tomt och skinande rent" },
+];
 
 export default function References() {
   if (galleryImages.length === 0) {
@@ -25,12 +28,11 @@ export default function References() {
         <div className={styles.grid}>
           {galleryImages.map((image) => (
             <div key={image.src} className={styles.imageCard}>
-              <Image
+              <img
                 src={image.src}
                 alt={image.alt}
-                width={400}
-                height={300}
                 className={styles.image}
+                loading="lazy"
               />
             </div>
           ))}
